@@ -16,12 +16,7 @@
 .env.test.local
 .env.production.local
 
-webpack.config.js
-public/css/
-public/js/
-public/img/
-public/fonts/
-BingSiteAuth.xml
+
 
 :npm-debug.log*
 yarn-debug.log*

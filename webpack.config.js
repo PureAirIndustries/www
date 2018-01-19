@@ -20,16 +20,28 @@ module.exports = {
         })
       },
       {
-        test: /\.(png|jpeg|jpg|ico|svg)$/,
+        test: /\.(png|jpeg|jpg|ico)$/,
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 25000
+          }
+        }
+      },
+      {
+        test: /\.svg$/,
         use: [
           'file-loader'
         ]
       },
       {
         test: /\.(otf|eot|woff|woff2|ttf)$/,
-        use: [
-          'file-loader'
-        ]
+        use: {
+          loader: 'url-loader',
+          options: {
+            limit: 25000
+          }
+        }
       },
       {
         test: /\.(js)$/,

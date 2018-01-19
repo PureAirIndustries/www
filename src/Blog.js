@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 class Blog extends Component {
   render () {
     return (
@@ -15,7 +14,7 @@ class Blog extends Component {
 
         <section id='main'>
           <header id='header'>
-            <span className='pull-left' />
+            <span className='pull-left'>Your source of all air pollution knowledge*</span>
             <div>Pure Air Industries <span>Blog</span></div>
           </header>
 
@@ -30,7 +29,7 @@ class Blog extends Component {
               <p>“Yeah, the air in cities is bad,” said the majority of the public. But, let’s put things in perspective first.</p>
 
               <p>Do you know how many cigarettes are in a Tabaco packet? 20.</p>
-'
+
               <p>Research has shown that in London, a normal day exposure can be the equivalent of smoking 15 cigarettes.</p>
 
               <p>That’s why this applies to all of us – not just to some – all the time. The same happens in other cities - because we’re talking of 40,000 people a year in United Kingdom. And 7 million in the world.</p>
@@ -43,9 +42,9 @@ class Blog extends Component {
 
               <div className='row'>
                 <div className='col-md-6 space-below'>
-                  <img src='images/better-route.png' alt='img' className='img-responsive' />
+                  <img src='img/better-route.png' alt='img' className='img-responsive' />
                 </div>
-                <div className='col-md-6'>
+                <div className='col-md-6 justify'>
                   <ul>
                     <li>
                       <p>1. The first one is, when you have to go somewhere, taking a secondary road and not a main road sidewalk has a decrease of ~<strong>50%</strong> on air pollution.</p>
@@ -56,9 +55,9 @@ class Blog extends Component {
 
               <div className='row'>
                 <div className='col-md-6 space-below'>
-                  <img src='images/out-of-car.png' alt='' className='img-responsive' />
+                  <img src='img/out-of-car.png' alt='' className='img-responsive' />
                 </div>
-                <div className='col-md-6'>
+                <div className='col-md-6 justify'>
                   <ul>
                     <li>
                       <p>2. Get out of the car – drivers can be exposed to 2x as much pollution as pedestrians. Especially if you don’t change your car’s air filter frequently.</p>
@@ -69,9 +68,9 @@ class Blog extends Component {
 
               <div className='row'>
                 <div className='col-md-6 space-below'>
-                  <img src='images/mayor-alert.png' alt='' className='img-responsive' />
+                  <img src='img/mayor-alert.png' alt='' className='img-responsive' />
                 </div>
-                <div className='col-md-6'>
+                <div className='col-md-6 justify'>
                   <ul>
                     <li>
                       <p>3. If pollution is very high – don’t exercise*; don’t go out. Follow <a href='https://twitter.com/SadiqKhan'>@SadiqKhan</a> (London’s Mayor) in Twitter. He tweets and advice every time air pollution is too high and for which groups it is. </p>
@@ -82,12 +81,12 @@ class Blog extends Component {
 
               <div className='row'>
                 <div className='col-md-6 space-below'>
-                  <img src='images/mobile.png' alt='' className='img-responsive' />
+                  <img src='img/mobile.png' alt='' className='img-responsive' />
                 </div>
-                <div className='col-md-6'>
+                <div className='col-md-6 justify'>
                   <ul>
                     <li>
-                      <p>4. Use data and apps that tell you where to go and how while avoiding pollutants – so routing apps. Like <a href='https://air.plumelabs.com/en/'>Plumelabs</a>. Also, there is quite an interesting app called  , which shows…</p>
+                      <p>4. Use data and apps that tell you where to go and how while avoiding pollutants – so routing apps. Like <a href='https://air.plumelabs.com/en/'>Plumelabs</a>.</p>
                     </li>
                   </ul>
                 </div>
@@ -95,9 +94,9 @@ class Blog extends Component {
 
               <div className='row'>
                 <div className='col-md-6'>
-                  <img src='images/forest.png' alt='' className='img-responsive' />
+                  <img src='img/forest.png' alt='' className='img-responsive' />
                 </div>
-                <div className='col-md-6'>
+                <div className='col-md-6 justify'>
                   <ul>
                     <li>
                       <p>5. Go on purpose to big parks every now and then (even better go to the country side for some days), and stay in the middle for some time. Go out after being rainy, especially if it has blown some wind, that’s the moment the air is cleaner. And the perfect moment to go for a walk.</p>
@@ -123,11 +122,15 @@ class Blog extends Component {
             </div>
           </section>
 
-          <footer id='footer'>
-            <div className='copyright'>
-              &copy; : <a href='/'>Pure Air Industries</a>.
+          <div className='row'>
+            <div className="col-md-12 col-xs-18">
+              <footer id='footer'>
+                <div className='copyright'>
+                  &copy; 2018 <a href='/'>Pure Air Industries</a>.
+                </div>
+              </footer>
             </div>
-          </footer>
+          </div>
         </section>
       </div>
     )

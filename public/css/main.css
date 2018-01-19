@@ -1480,6 +1480,10 @@
 	#second-image {
 		background-image: url("../img/city-after.png");
 	}
+	
+	.img-after{
+		background-image: url("../img/city-after.png");
+	}
 
 		#banner .inner {
 			-moz-transform: scale(1.0);
@@ -1689,6 +1693,12 @@
 
 		.flex.flex-2 .col {
 			width: 48%;
+		}
+
+		@media (max-width: 753px){
+			.flex.flex-2{
+				height: 5em;
+			}
 		}
 
 		.flex.flex-3 .col {
@@ -2118,32 +2128,23 @@ ul {
 	.public-footer .mail{padding-left:0}
 	.footer-list-main .footer-list-nested{float:none}
 }
-@media (max-width: 768px){.footer-list-main{float:none;display:block;margin:5px auto}.public-footer .mail{float:none;display:block;margin:5px auto;padding-left:40px}
+@media (max-width: 768px){
+	.footer-list-main{float:none;display:block;margin:5px auto}.public-footer .mail{float:none;display:block;margin:5px auto;padding-left:40px}
 }
 
+.cool-title{
+	font-size: 32px;
+	font-weight: 800;
+}
 
+.justify {
+	text-align: justify;;
+}
 
+.regular {
+	font-size: 2em;
+}
 
-
-
-  	.cool-title{
-  		font-size: 62px;
-  		font-weight: 800;
-  	}
-
-  	.background-people {
-			background-image: url("../img/community.png");
-
-  	}
-
-  	.background-money {
-			background-image: url("../img/money.png");
-  	}
-
-		.regular {
-			font-size: 2em;
-		}
-
-		.no-decoration {
-			text-decoration:none;
-		}
+.no-decoration {
+	text-decoration:none;
+}

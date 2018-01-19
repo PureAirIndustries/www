@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 class Ico extends Component {
   render () {
     return (

@@ -15,4 +15,4 @@ import './loading-bar.min.js';
 import './material.min.js';
 import './material-kit.js'
 import './nouislider.min.js';
-import '../css/all.css';
+import '../css/plain.css';
