@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import 'img/PUREmedium.png';
+import 'img/PUREsmall.png';
+import 'img/PURE.png';
 
 class Ico extends Component {
   render () {

@@ -1,18 +1,23 @@
 const path = require('path')
 const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
   entry: {
-    main: './public',
+    main: './public/js/all.js'
+  },
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'public')
   },
   module: {
     rules: [
       {
-        test: /\.(css|scss)$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
       },
       {
         test: /\.(png|jpeg|jpg|ico|svg)$/,
@@ -28,9 +33,9 @@ module.exports = {
       },
       {
         test: /\.(js)$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
-          exclude: /node_modules/,
           options: {
             presets: ['env']
           }
@@ -42,10 +47,9 @@ module.exports = {
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery'
+    }),
+    new ExtractTextPlugin({
+      filename: '[name].css'
     })
-  ],
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'public')
-  }
+  ]
 }
