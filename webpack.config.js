@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'public')
+    path: path.resolve(__dirname, 'src/extra')
   },
   module: {
     rules: [
@@ -61,7 +61,7 @@ module.exports = {
       jQuery: 'jquery'
     }),
     new ExtractTextPlugin({
-      filename: '[name].css'
+      filename: 'ico.css'
     })
   ]
 }

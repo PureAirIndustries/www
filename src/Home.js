@@ -6,9 +6,9 @@ class Home extends Component {
       <div class='page-wrap'>
         <nav id='nav'>
           <ul>
-            <li><a href='/' className='active'><span className='icon fa-cloud'></span></a></li>
-            <li><a href='/blog'><span className='icon fa-file-text-o'></span></a></li>
-            <li><a target='_blank' rel='noopener noreferrer' href='https://air-pollution-eradication.mn.co/'><span className='icon fa-users'></span></a></li>
+            <li><a href='/' className='active'><span className='icon fa-cloud' /></a></li>
+            <li><a href='/blog'><span className='icon fa-file-text-o' /></a></li>
+            <li><a target='_blank' rel='noopener noreferrer' href='https://air-pollution-eradication.mn.co/'><span className='icon fa-users' /></a></li>
           </ul>
         </nav>
         <section id='main'>

@@ -1,11 +1,3 @@
-import './jquery.min.js';
-import './jquery.poptrox.min.js';
-import './jquery.scrollex.min.js';
-import './jquery.scrolly.min.js';
-import './skel.min.js';
-import './util.js';
-import './simple-timer.min.js';
-import './nouislider.min.js';
 import './clipboard.js';
 import './constellation.min.js';
 import './countdown.min.js';
