@@ -153,7 +153,7 @@ class Home extends Component {
             </div>
           </section>
 
-          <section id='banner' className='image-after'>
+          <section id='second-image' className='image-after'>
             <div className='inner'>
               <header>
                 <h1>And the time for change is now</h1>
