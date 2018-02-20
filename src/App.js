@@ -4,6 +4,8 @@ import Home from './Home'
 import Blog from './Blog'
 import Resources from './Resources'
 import Funding from './Funding'
+import Privacy from './Privacy'
+import Terms from './Terms'
 
 class App extends Component {
   render () {
@@ -14,6 +16,8 @@ class App extends Component {
           <Route exact path='/blog' component={Blog} />
           <Route exact path='/resources' component={Resources} />
           <Route exact path='/funding' component={Funding} />
+          <Route exact path='/privacy' component={Privacy} />
+          <Route exact path='/tos' component={Terms} />
         </Switch>
       </Router>
     )

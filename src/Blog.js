@@ -7,8 +7,8 @@ class Blog extends Component {
       <div className='page-wrap'>
         <nav id='nav'>
           <ul>
-            <li><a href='index.html' ><span className='icon fa-cloud' /></a></li>
-            <li><a href='blog.html' className='active'><span className='icon fa-file-text-o' /></a></li>
+            <li><a href='/' ><span className='icon fa-cloud' /></a></li>
+            <li><a href='blog' className='active'><span className='icon fa-file-text-o' /></a></li>
             <li><a href='https://air-pollution-eradication.mn.co/'><span className='icon fa-users' /></a></li>
           </ul>
         </nav>

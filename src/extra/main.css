@@ -9884,7 +9884,6 @@ table.alt tfoot {
   -webkit-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  background-image: url(797a0ad98c6f089a8f7b54ae60632097.png);
   background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -9896,7 +9895,11 @@ table.alt tfoot {
   overflow: hidden
 }
 
-#second-image {
+.image-before {
+  background-image: url(797a0ad98c6f089a8f7b54ae60632097.png);
+}
+
+.image-after {
   background-image: url(4dba0627ceb248235b36cff9576ce761.png)
 }
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './extra/main.css'
 
-class Blog extends Component {
+class Terms extends Component {
   render () {
     return (
       <div className='page-wrap'>
@@ -15,7 +15,8 @@ class Blog extends Component {
 
         <section id='main'>
           <header id='header'>
-            <span className='text-center'>About us</span>
+            <span className='pull-left'>Your source of all air pollution knowledge*</span>
+            <div>Pure Air Industries <span>Blog</span></div>
           </header>
 
           <section>
@@ -137,4 +138,4 @@ class Blog extends Component {
   }
 }
 
-export default Blog
+export default Terms

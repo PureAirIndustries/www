@@ -1,6 +1,41 @@
 import React, { Component } from 'react'
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      name: '',
+      email: '',
+      message: ''
+    }
+
+    this.handleName = this.handleName.bind(this)
+    this.handleEmail = this.handleEmail.bind(this)
+    this.handleMessage = this.handleMessage.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleName = (e) => {
+    this.setState({
+      name: e.value
+    })
+  }
+  handleEmail = (e) => {
+    this.setState({
+      email: e.value
+    })
+  }
+  handleMessage = (e) => {
+    this.setState({
+      message: e.value
+    })
+  }
+
+  handleSubmit = (e) => {
+    const data = new FormData(e.target)
+  }
+
   render () {
     return (
       <div class='page-wrap'>
@@ -12,7 +47,7 @@ class Home extends Component {
           </ul>
         </nav>
         <section id='main'>
-          <section id='banner'>
+          <section id='banner' class='image-before'>
             <div className='inner'>
               <header>
                 <h1>Every Year 7 Million People Die Premature Because Of Air Pollution</h1>
@@ -132,19 +167,19 @@ class Home extends Component {
 
             <div className='column'>
               <h3>Get in Touch</h3>
-              <form action='https://formspree.io/isaac@isaacramonet.com' method='post'>
+              <form action={this.handleSubmit} method='post'>
                 <div className='field half first'>
                   <label for='name'>Name</label>
-                  <input name='name' id='name' type='text' placeholder='Name' />
+                  <input name='name' id='name' value={this.state.name} onChange={this.handleName} type='text' placeholder='Name' />
                 </div>
                 <div className='field half'>
                   <label for='email'>Email</label>
-                  <input name='_replyto' id='email' type='email' placeholder='Email' />
+                  <input name='_replyto' id='email' value={this.state.email} onChange={this.handleEmail} type='email' placeholder='Email' />
                 </div>
 
                 <div className='field'>
                   <label for='message'>Message</label>
-                  <textarea name='message' id='message' rows='6' placeholder='Message' />
+                  <textarea name='message' id='message' value={this.state.content} onChange={this.handleMessage} rows='6' placeholder='Message' />
                 </div>
                 <ul className='actions'>
                   <li><input value='Send Message' className='button' type='submit' /></li>
@@ -153,7 +188,7 @@ class Home extends Component {
             </div>
           </section>
 
-          <section id='second-image' className='image-after'>
+          <section id='banner' className='image-after'>
             <div className='inner'>
               <header>
                 <h1>And the time for change is now</h1>
