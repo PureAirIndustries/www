@@ -10612,7 +10612,8 @@ p {text-align: justify}
   margin-top: 9%;
 }
 
-body {
-  overflow-x: 0;
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
   overflow-y: auto;
 }
