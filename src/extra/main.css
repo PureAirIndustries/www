@@ -10594,3 +10594,20 @@ ul {
 .img-after {
   background-image: url(4dba0627ceb248235b36cff9576ce761.png)
 }
+
+.parent-list{ font-weight: 600; line-height: 3.9rem}
+.sub-list:before { content: counters(item, ".") " "; counter-increment: item; }
+ol > li > ol {
+  padding-left: 2rem;
+}
+ol > li > ol > li > ol > li {
+  padding-left: 5rem;
+}
+
+p {text-align: justify}
+
+.margin-bottom{margin-bottom: 2%;}
+
+.next-section {
+  margin-top: 9%;
+}

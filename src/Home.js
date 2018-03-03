@@ -43,6 +43,7 @@ class Home extends Component {
           <ul>
             <li><a href='/' className='active'><span className='icon fa-cloud' /></a></li>
             <li><a href='/blog'><span className='icon fa-file-text-o' /></a></li>
+            <li><a href='/funding'><span className='icon fa-dollar' /></a></li>
             <li><a target='_blank' rel='noopener noreferrer' href='https://air-pollution-eradication.mn.co/'><span className='icon fa-users' /></a></li>
           </ul>
         </nav>
@@ -91,7 +92,7 @@ class Home extends Component {
                 <div className='row'>
                   <div className='col-sm-12 dm-vp'>
                     <h2 className='dm-main-title' id='startchange'>
-                    This is our mission
+                    This is our mission and what we stand for
                     </h2>
                     <p className='dm-main-subtitle' />
                   </div>
@@ -248,11 +249,11 @@ class Home extends Component {
                   </li>
 
                   <li>
-                    <a href='/'>Privacy</a>
+                    <a href='/privacy'>Privacy</a>
                   </li>
 
                   <li>
-                    <a href='/'>Terms</a>
+                    <a href='/tos'>Terms</a>
                   </li>
                 </ul>
                 <ul className='mail'>
@@ -262,7 +263,7 @@ class Home extends Component {
                   </h3>
 
                   <li>
-                    <a href='mailto:isaac@isaacramonet.com'>Contact us<i className='fa fa-envelope-o' /></a>
+                    <a href='mailto:contact@pureairindustries.com'>Contact us<i className='fa fa-envelope-o' /></a>
                   </li>
 
                 </ul>

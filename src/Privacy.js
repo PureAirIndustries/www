@@ -7,38 +7,75 @@ class Privacy extends Component {
       <div className='page-wrap'>
         <nav id='nav'>
           <ul>
-            <li><a href='/' ><span className='icon fa-cloud' /></a></li>
-            <li><a href='blog' className='active'><span className='icon fa-file-text-o' /></a></li>
-            <li><a href='https://air-pollution-eradication.mn.co/'><span className='icon fa-users' /></a></li>
+            <li><a href='/' className='active'><span className='icon fa-cloud' /></a></li>
+            <li><a href='/blog'><span className='icon fa-file-text-o' /></a></li>
+            <li><a href='/funding'><span className='icon fa-dollar' /></a></li>
+            <li><a target='_blank' rel='noopener noreferrer' href='https://air-pollution-eradication.mn.co/'><span className='icon fa-users' /></a></li>
           </ul>
         </nav>
 
         <section id='main'>
           <header id='header'>
-            <span className='text-center'>Your source of all air pollution knowledge*</span>
+            <span className='text-center'>Your privacy is important to us*</span>
           </header>
 
           <section>
             <div className='inner col-xs-6 col-md-6 col-md-offset-3 col-xs-offset-3 blog'>
               <header>
-                <h1 className='text-center'>Did You Know Air Pollution Is Killing 9500 People Up To 2 Years Early Every Year Just In The City of London Alone? (…And That Number Has Been Increasing For The Last 10 Years)</h1>
+                <h1 className='text-center'>Privacy Policy</h1>
 
-                <h2 className='italics subtitle text-center'>Well, let us show you the 5 things you can do right now to help you avoid dying earlier</h2>
               </header>
+              <p>This policy sets out the basis on which libbres of PURE AIR INDUSTRIES (Company Number 10789748) (together with our subsidiaries, our holding company, subsidiaries of our holding company from time to time, collectively called “<b>Pure Air</b>”, “<b>Pure Air Industries</b>”, “<b>us</b>”, <b>“the company</b>”, “<b>Mammbo Group</b>” or “<b>we</b>”) collects personal data from you and how we process such data.</p>
+              <p>By visiting our website <b>pureairindustries.com </b>(our “Site”), you accept and consent to the practices set out below. </p>
 
-              <p>“Yeah, the air in cities is bad,” said the majority of the public. But, let’s put things in perspective first.</p>
-
-              <p>Do you know how many cigarettes are in a Tabaco packet? 20.</p>
-
-              <p>Research has shown that in London, a normal day exposure can be the equivalent of smoking 15 cigarettes.</p>
-
-              <p>That’s why this applies to all of us – not just to some – all the time. The same happens in other cities - because we’re talking of 40,000 people a year in United Kingdom. And 7 million in the world.</p>
-
-              <p>That’s why it’s so important to know and follow these rules.</p>
-
-              <p>Luckily for us, it has been found in scientific studies this bad effects can be reversed, starting as soon as the quality of air you breathe is improved and cleaned from pollutants.</p>
-
-              <p>So, let’s get right into it,</p>
+              <ol>
+                <li class='parent-list'>Collection of information</li>
+                <li class='sub-list'>For the purposes outlined in Clause 2, we may collect and process the following information about you:</li>
+                <ol type='a'>
+                  <li><i> Information you give us</i> - information that you provide us (which may include your name, address, email address, telephone number, credit card information and other personal description) by filling in forms on our Site, or by corresponding with us (by phone, email or otherwise), for example:</li>
+                  <ol type='i'>
+                    <li>when you report any problem to us;</li>
+                    <li>when you use certain features on our Site;</li>
+                    <li>when you request any support from us; or</li>
+                    <li>when you complete any survey or questionnaire we send you.</li>
+                  </ol>
+                  <li><i>Information we collect about you </i>- information automatically collected when you visit our Site, for example:</li>
+                  <ol type='i'>
+                    <li>technical information, including the Internet protocol (IP) address used to connect your computer to the Internet and your log-in information, browser type and version, time zone setting, browser plug-in types and versions, operating system and platform;</li>
+                    <li>information about your visit, including the full Uniform Resource Locators (URLs), clickstream to, through and from our site (including date and time), products you viewed or searched for, page response times, download errors, length of visits to certain pages, page interaction information (such as scrolling, clicks, and mouse-overs), methods used to browse away from the page, and any phone number used to call our customer service number.</li>
+                  </ol>
+                </ol>
+                <li class='sub-list'>We only retain personal data for so long as it is necessary. Data may be archived as long as the purpose for which the data was used still exists.</li>
+                <li class='parent-list'>Uses made of the information</li>
+                <li class='parent-list'>Disclosure of your information</li>
+                <li class='sub-list'>We will keep your personal data we hold confidential but you agree we may provide information to:</li>
+                  <ol type='a'>
+                    <li>any member of our group, which means our subsidiaries, our ultimate holding company and its subsidiaries, as defined in section 1159 of the Companies Act 2006</li>
+                    <li>personnel, agents, advisers, auditors, contractors, financial institutions, and service providers in connection with our operations or services (for example staff engaged in the provision of support services);</li>
+                    <li>our overseas offices, affiliates, business partners and counterparts (on a need-to-know basis only);</li>
+                    <li>persons under a duty of confidentiality to us;</li>
+                    <li>persons to whom we are required to make disclosure under applicable laws and regulations in or outside of UNITED KINGDOM AND WALES; or</li>
+                    <li>actual or proposed transferees actual or proposed transferees of our operations (or a substantial part thereof) in or outside of our operations (or a substantial part thereof) in or outside of UNITED KINGDOM and WALES.</li>
+                  </ol>
+                <li class='parent-list'>Third-party sites</li>
+                <li class='sub-list'>Our Site or our communication with you may from time to time contain links to third-party websites over which we have no control. If you follow a link to any of these websites, please note that they have their own practices and policies. We encourage you to read the privacy policies or statements of these websites understand your rights. We accept no responsibility or liability for any practices of third-party websites.</li>
+                <li class='parent-list'>Security</li>
+                <li class='sub-list'>Please note, however, the transmission of information via the Internet is not completely secure. Although we will do our best to protect your personal data, we cannot guarantee the security of your data transmitted to our Site; any transmission is at your own risk.</li>
+                <li class='parent-list'>Your rights</li>
+                <li class='sub-list'>You have the right to:</li>
+                  <ol type='a'>
+                    <li>check whether we hold personal data about you;</li>
+                    <li>access any personal data we hold about you; and</li>
+                    <li>require us to correct any inaccuracy or error in any personal data we hold about you.</li>
+                  </ol>
+                <li class='sub-list'>Any request under Clause 6.1 may be subject to a small administrative fee to meet our cost in processing your request.</li>
+                <li class='parent-list'>Changes to our privacy policy</li>
+                <li class='sub-list'>We may amend this policy from time to time by posting the updated policy on our Site. By continuing to use our Site after the changes come into effect means that you agree to be bound by the revised policy.</li>
+                <li class='parent-list'>Contact us</li>
+                <li class='sub-list'>If you have any questions, comments or requests regarding personal data, please address them to:</li>
+                <a href='mailto:contact@pureairindustries.com'>contact@pureairindustries.com</a>
+              </ol>
+              <p>Last updated:<b> 20th February 2018</b></p>
             </div>
           </section>
 
