@@ -10611,3 +10611,8 @@ p {text-align: justify}
 .next-section {
   margin-top: 9%;
 }
+
+body {
+  overflow-x: 0;
+  overflow-y: auto;
+}

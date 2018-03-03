@@ -52,7 +52,6 @@ class Home extends Component {
             <div className='inner'>
               <header>
                 <h1>Every Year 7 Million People Die Premature Because Of Air Pollution</h1>
-                <p>And...</p>
 
               </header>
             </div>
