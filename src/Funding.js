@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import './extra/main.css'
+import Logo from './img/o2-logo.png';
 
 class Blog extends Component {
   render () {
+    console.log(Logo);
     return (
       <div className='page-wrap'>
         <nav id='nav'>
@@ -32,7 +34,7 @@ class Blog extends Component {
 
               <p>A programme designed to support young entrepreneurs with an idea for 10 months with funding and mentorships.</p>
 
-              <a href='http://www.o2thinkbig.co.uk/the-environment-now'><img className='margin-bottom' src='https://static1.squarespace.com/static/5898595886e6c0c6ce7e6bd3/589f94f02e69cf7248dda782/5a0c7f2aec212dec2b488db5/1517423825610/the-environment-now.png?format=300w' /></a>
+              <a href='http://www.o2thinkbig.co.uk/the-environment-now'><img className='margin-bottom' src={Logo} /></a>
 
               <p className='next-section'>On February 2018 we signed a document of collaboration with LJMU University and Liverpool's University virtual engineering center under <a href='http://lcr4.uk/'>LCR 4.0</a> programme funded by the EU.</p>
 
