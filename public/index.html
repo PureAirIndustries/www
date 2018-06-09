@@ -15,17 +15,7 @@
   	<link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
   	<link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-51900241-15"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-51900241-15');
-    </script>
 
     <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="14633ae5-b35b-44c3-9bd1-f37c8f611b41" type="text/javascript" async></script>
   </head>
@@ -36,5 +26,19 @@
     <div id="root"></div>
 
     <script src='main.js'></script>
+    <script type="text/javascript">
+      
+    </script>
+    <script type="text/javascript">
+      if (localStorage.getItem('accepted') === 'true') {
+        var tagManager = window.createElement('script'); tagManager.type = 'text/javascript';
+        tagManager.src = 'https://www.googletagmanager.com/gtag/js?id=UA-51900241-15'
+        document.getElementsByTagName('head')[0].appendChild(tagManager);
+
+        var ga = window.createElement('script'); ga.type = "text/javascript";
+        ga.src = './js/ga.js';
+        document.head.appendChild(ga);
+      }
+    </script>
   </body>
 </html>

@@ -210,7 +210,7 @@ class Home extends Component {
                   </li>
 
                   <li>
-                    <a target='_blank' rel='noopener noreferrer' href='https://docsend.com/view/efjfhfa'>Investor Relations</a>
+                    <a target='_blank' rel='noopener noreferrer' href='https://docsend.com/view/4g8dcv6'>Investor Relations</a>
                   </li>
 
                   <li>
