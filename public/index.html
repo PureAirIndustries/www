@@ -39,25 +39,27 @@
 
   </script>
   <script type="text/javascript">
-      var tagManager = window.createElement('script'); tagManager.type = 'text/javascript';
-      tagManager.src = 'https://www.googletagmanager.com/gtag/js?id=UA-51900241-15'
-      document.getElementsByTagName('head')[0].appendChild(tagManager);
+   document.addEventListened('DOMContentLoaded', function() {
+     var tagManager = window.createElement('script'); tagManager.type = 'text/javascript';
+     tagManager.src = 'https://www.googletagmanager.com/gtag/js?id=UA-51900241-15'
+     document.getElementsByTagName('head')[0].appendChild(tagManager);
 
-      var ga = window.createElement('script'); ga.type = "text/javascript";
-      ga.src = './js/ga.js';
-      document.head.appendChild(ga);
+     var ga = window.createElement('script'); ga.type = "text/javascript";
+     ga.src = './js/ga.js';
+     document.head.appendChild(ga);
 
-      var companyId = 1842;
-      var _paq = _paq || [];
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function () {
-        var u = "https://analytics1.maaxmarket.com/";
-        _paq.push(['setTrackerUrl', u + 'js/']);
-        _paq.push(['setSiteId', 1179]);
-        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-        g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'js/'; s.parentNode.insertBefore(g, s);
-      })();
+     var companyId = 1842;
+     var _paq = _paq || [];
+     _paq.push(['trackPageView']);
+     _paq.push(['enableLinkTracking']);
+     (function () {
+       var u = "https://analytics1.maaxmarket.com/";
+       _paq.push(['setTrackerUrl', u + 'js/']);
+       _paq.push(['setSiteId', 1179]);
+       var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+       g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'js/'; s.parentNode.insertBefore(g, s);
+     })();
+   });
   </script>
 </body>
 
