@@ -123,7 +123,7 @@ class SubloaderComponent extends React.Component {
         <div className="sw-loader__holder">
           {this.renderTiles()}
         </div>
-        <p>{this.props.location.state.redirectToTitle}</p>
+        <p>{this.props.location.state.redirectToTitle ? this.props.location.state.redirectToTitle : ''}</p>
       </div>
       </div>
     )
@@ -132,9 +132,9 @@ class SubloaderComponent extends React.Component {
 
 
 const Loader = ({ component: Component, ...rest }) => {
-  const data = {
-    size: 200
-  };
+    const data = {
+      size: 200
+    };
 
     return <SubloaderComponent
             data={data}

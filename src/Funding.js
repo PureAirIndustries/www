@@ -5,7 +5,6 @@ import Logo from './img/o2-logo.png';
 
 class Blog extends Component {
   render () {
-    console.log(Logo);
     return (
       <div className='page-wrap'>
         <nav id='nav'>

@@ -26,7 +26,12 @@ class Routes extends Component {
           <Route exact path='/tos' component={Terms} />
           <Route path='/ico'
             component={Loader}
-            loc="http://airbastion.herokuapp.com/ico?utm_pai"
+            location={{
+              state: {
+                redirectPath: "http://airbastion.herokuapp.com/ico?utm_pai",
+                redirectToTitle: "You're being redirected to our current ICO page"
+              }
+            }}
           />
         </Switch>
       </Router>

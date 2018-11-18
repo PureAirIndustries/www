@@ -32,7 +32,7 @@ class Privacy extends Component {
                 <h1 className='text-center'>Privacy Policy</h1>
 
               </header>
-              <p>This policy sets out the basis on which libbres of PURE AIR INDUSTRIES (Company Number 10789748) (together with our subsidiaries, our holding company, subsidiaries of our holding company from time to time, collectively called “<b>Pure Air</b>”, “<b>Pure Air Industries</b>”, “<b>us</b>”, <b>“the company</b>”, “<b>Mammbo Group</b>” or “<b>we</b>”) collects personal data from you and how we process such data.</p>
+              <p>This policy sets out the basis on which libres of PURE AIR INDUSTRIES (Company Number 10789748) (together with our subsidiaries, our holding company, subsidiaries of our holding company from time to time, collectively called “<b>Pure Air</b>”, “<b>Pure Air Industries</b>”, “<b>us</b>”, <b>“the company</b>”, “<b>Mammbo Group</b>” or “<b>we</b>”) collects personal data from you and how we process such data.</p>
               <p>By visiting our website <b>pureairindustries.com </b>(our “Site”), you accept and consent to the practices set out below. </p>
 
               <ol>
