@@ -10617,3 +10617,16 @@ html, body {
   max-width: 100%;
   overflow-y: auto;
 }
+
+.message-sent {
+  display: inline-block;
+  font-size: 1.5rem;
+  color: red;
+  padding-left: 21px;
+}
+
+  /* color: #1fe5bd; */
+
+.hidden {
+  display: none;
+}

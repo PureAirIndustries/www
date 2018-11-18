@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './extra/main.css'
 import Logo from './img/o2-logo.png';
 
@@ -9,9 +10,15 @@ class Blog extends Component {
       <div className='page-wrap'>
         <nav id='nav'>
           <ul>
-            <li><a href='/'><span className='icon fa-cloud' /></a></li>
-            <li><a href='/blog'><span className='icon fa-file-text-o' /></a></li>
-            <li><a href='/funding' className='active'><span className='icon fa-dollar' /></a></li>
+            <li><a href='/' className='active'><span className='icon fa-cloud' /></a></li>
+            <li><Link to={{
+              pathname: '/blog',
+              state: {
+                redirectPath: 'http://blog.pureairindustries.com',
+                redirectToTitle: "You are being redirected to Pure Air Industries' Blog - enjoy :)"
+              }
+            }}><span className='icon fa-file-text-o' /></Link></li>
+            <li><a href='/funding'><span className='icon fa-dollar' /></a></li>
             <li><a target='_blank' rel='noopener noreferrer' href='https://air-pollution-eradication.mn.co/'><span className='icon fa-users' /></a></li>
           </ul>
         </nav>

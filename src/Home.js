@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import axios from 'axios'
+import classnames from 'classnames'
 
 class Home extends Component {
   constructor(props) {
@@ -7,48 +10,71 @@ class Home extends Component {
     this.state = {
       name: '',
       email: '',
-      message: ''
+      message: '',
+      sent: false,
     }
-
-    this.handleName = this.handleName.bind(this)
-    this.handleEmail = this.handleEmail.bind(this)
-    this.handleMessage = this.handleMessage.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleName = (e) => {
     this.setState({
-      name: e.value
+      name: e.target.value
     })
   }
+
   handleEmail = (e) => {
     this.setState({
-      email: e.value
+      email: e.target.value
     })
   }
+
   handleMessage = (e) => {
     this.setState({
-      message: e.value
+      message: e.target.value
     })
   }
 
   handleSubmit = (e) => {
-    const data = new FormData(e.target)
+    e.preventDefault();
+    const data = {
+      NAME: this.state.name,
+      EMAIL: this.state.email,
+      MESSAGE: this.state.message,
+    }
+
+    const url = 'https://script.google.com/macros/s/AKfycbyvQLS-3V-ScX7fGhXQA5dhcHw7YxbSvT73AyC6Nzh9OHRxnUIH/exec'
+
+
+    axios.get(
+      url,
+      { dataType: "json" },
+      JSON.stringify(data)
+    )
+    .then((success) => (
+      this.setState({
+        sent: true
+      })
+    ))
   }
 
   render () {
     return (
-      <div class='page-wrap'>
+      <div className='page-wrap'>
         <nav id='nav'>
           <ul>
             <li><a href='/' className='active'><span className='icon fa-cloud' /></a></li>
-            <li><a href='/blog'><span className='icon fa-file-text-o' /></a></li>
+            <li><Link to={{
+              pathname: '/blog',
+              state: {
+                redirectPath: 'http://blog.pureairindustries.com',
+                redirectToTitle: "You are being redirected to Pure Air Industries' Blog - enjoy :)"
+              }
+            }}><span className='icon fa-file-text-o' /></Link></li>
             <li><a href='/funding'><span className='icon fa-dollar' /></a></li>
             <li><a target='_blank' rel='noopener noreferrer' href='https://air-pollution-eradication.mn.co/'><span className='icon fa-users' /></a></li>
           </ul>
         </nav>
         <section id='main'>
-          <section id='banner' class='image-before'>
+          <section id='banner' className='image-before'>
             <div className='inner'>
               <header>
                 <h1>Every Year 7 Million People Die Premature Because Of Air Pollution</h1>
@@ -63,19 +89,19 @@ class Home extends Component {
                   <h2 className='special-font text-shadow' >We can't stand it anymore - It's time for a change</h2>
                 </header>
                 <div>
-                  <p className='regular' styl='font-size: 1.5em'> It's a heartbraking situation that <u>MUST</u> be tackled and solved.</p>
+                  <p className='regular' style={{'fontSize': '1.5em'}} > It's a heartbraking situation that <u>MUST</u> be tackled and solved.</p>
                   <p className='regular'> And we need to solve it now. Because in numbers </p>
                 </div>
                 <br /><br /><br />
-                <div className='video col-md-6 col-xs-8 offers' style={{'border-right': '#95a5a6 solid 1em', 'border-radius': '10px'}}>
+                <div className='video col-md-6 col-xs-8 offers' style={{'borderRight': '#95a5a6 solid 1em', 'borderRadius': '10px'}}>
                   <div className='image img-responsive offer_item'>
-                    <p style={{'font-size': '20em', 'z-index': '100', 'position': 'absolute', 'top': '4%', 'left': '7%'}} className='big weighted'>5M</p>
+                    <p style={{'fontSize': '20em', 'zIndex': '100', 'position': 'absolute', 'top': '4%', 'left': '7%'}} className='big weighted'>5M</p>
                     <img src='img/ext.png' alt='' className='img-responsive' />
                   </div>
                 </div>
-                <div className='video col-md-6 col-xs-8' style={{'padding-left': '6%', 'border-left': '#bdc3c7 solid 1em', 'border-radius': '10px'}}>
+                <div className='video col-md-6 col-xs-8' style={{'paddingLeft': '6%', 'borderLeft': '#bdc3c7 solid 1em', 'borderRadius': '10px'}}>
                   <div className='image image-responsive offer_item'>
-                    <p style={{'font-size': '20em', 'z-index': '100', 'position': 'absolute', 'top': '4%', 'left': '7%'}} className='big'>7T</p>
+                    <p style={{'fontSize': '20em', 'zIndex': '100', 'position': 'absolute', 'top': '4%', 'left': '7%'}} className='big'>7T</p>
                     <img src='img/money.png' alt='' className='img-responsive' />
                   </div>
                 </div>
@@ -97,7 +123,7 @@ class Home extends Component {
                   </div>
                 </div>
               </div>
-              <div className='container' style={{'text-align': 'center', 'color': '#333'}}>
+              <div className='container' style={{'textAlign': 'center', 'color': '#333'}}>
                 <div className='midas-card'>
                   <p>We believe everyone has the right to have pure, clean and fresh air no matter where he/she decides to live.</p>
 
@@ -155,7 +181,7 @@ class Home extends Component {
           <section id='contact'>
             <div className='social column'>
               <h3>About Us</h3>
-              <img src='img/pure-air-logo.png' alt='' className='img-responsive' style={{'width': '60%', 'padding-bottom': '3%'}} />
+              <img src='img/pure-air-logo.png' alt='' className='img-responsive' style={{'width': '60%', 'paddingBottom': '3%'}} />
 
               <h3>Help Us Spread The Word</h3>
               <ul className='icons'>
@@ -167,22 +193,27 @@ class Home extends Component {
 
             <div className='column'>
               <h3>Get in Touch</h3>
-              <form action={this.handleSubmit} method='post'>
+              <form onSubmit={this.handleSubmit}>
                 <div className='field half first'>
-                  <label for='name'>Name</label>
-                  <input name='name' id='name' value={this.state.name} onChange={this.handleName} type='text' placeholder='Name' />
+                  <label htmlFor='name'>Name</label>
+                  <input name='NAME' id='name' value={this.state.name} onChange={this.handleName} type='text' placeholder='Name' />
                 </div>
                 <div className='field half'>
-                  <label for='email'>Email</label>
-                  <input name='_replyto' id='email' value={this.state.email} onChange={this.handleEmail} type='email' placeholder='Email' />
+                  <label htmlFor='email'>Email</label>
+                  <input name='EMAIL' id='email' value={this.state.email} onChange={this.handleEmail} type='email' placeholder='Email' />
                 </div>
 
                 <div className='field'>
-                  <label for='message'>Message</label>
-                  <textarea name='message' id='message' value={this.state.content} onChange={this.handleMessage} rows='6' placeholder='Message' />
+                  <label htmlFor='message'>Message</label>
+                  <textarea name='MESSAGE' id='message' value={this.state.content} onChange={this.handleMessage} rows='6' placeholder='Message' />
                 </div>
                 <ul className='actions'>
                   <li><input value='Send Message' className='button' type='submit' /></li>
+                  <p className={classnames({
+                    'hidden': true ? !this.state.sent : false,
+                    'message-sent': true ? this.state.sent : false,
+                    'animated fadeInUp': true ? this.state.sent : false
+                  })}>Your message wasn't sent, please send your <a href='mailto:contact@pureairindustries.com'>email here!</a></p>
                 </ul>
               </form>
             </div>
@@ -214,7 +245,7 @@ class Home extends Component {
                   </li>
 
                   <li>
-                    <a className='logo' style={{'font-weight': '300', 'letter-spacing': '1px', 'font-size': '17px'}} href='https://docsend.com/view/xurst5y'>Product presentation</a>
+                    <a className='logo' style={{'fontWeight': '300', 'letterSpacing': '1px', 'fontSize': '17px'}} href='https://docsend.com/view/xurst5y'>Product presentation</a>
                   </li>
 
                 </ul>

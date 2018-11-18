@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import './extra/main.css'
 
 class Blog extends Component {
@@ -8,7 +9,13 @@ class Blog extends Component {
         <nav id='nav'>
           <ul>
             <li><a href='/' className='active'><span className='icon fa-cloud' /></a></li>
-            <li><a href='/blog'><span className='icon fa-file-text-o' /></a></li>
+            <li><Link to={{
+              pathname: '/blog',
+              state: {
+                redirectPath: 'http://blog.pureairindustries.com',
+                redirectToTitle: "You are being redirected to Pure Air Industries' Blog - enjoy :)"
+              }
+            }}><span className='icon fa-file-text-o' /></Link></li>
             <li><a href='/funding'><span className='icon fa-dollar' /></a></li>
             <li><a target='_blank' rel='noopener noreferrer' href='https://air-pollution-eradication.mn.co/'><span className='icon fa-users' /></a></li>
           </ul>

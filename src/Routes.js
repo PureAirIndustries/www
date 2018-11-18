@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './Home'
 import Blog from './Blog'
 import Resources from './Resources'
 import Funding from './Funding'
 import Privacy from './Privacy'
 import Terms from './Terms'
-import Team from './Team'
+import { Team } from './Team'
+import Redirect from './Redirect';
+import Loader from './Loader';
 
 class Routes extends Component {
   render () {
@@ -14,15 +16,18 @@ class Routes extends Component {
       <Router>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route exact path='/blog' component={Blog} />
+          <Route exact path='/blog'
+            component={Loader}
+          /> // redirect to blog.pureairindustries.cm
           <Route exact path='/resources' component={Resources} />
           <Route exact path='/funding' component={Funding} />
           <Route exact path='/team' component={Team} />
           <Route exact path='/privacy' component={Privacy} />
           <Route exact path='/tos' component={Terms} />
-          <Route path='/ico'>
-            <Redirect to='http://airbastion.herokuapp.com' />
-          </Route>
+          <Route path='/ico'
+            component={Loader}
+            loc="http://airbastion.herokuapp.com/ico?utm_pai"
+          />
         </Switch>
       </Router>
     )

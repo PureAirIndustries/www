@@ -4,6 +4,7 @@
 /node_modules
 
 ico/
+blog/
 
 # testing
 /coverage

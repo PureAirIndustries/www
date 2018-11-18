@@ -1,7 +1,7 @@
 $('#video').click(function() {
   document.getElementById('video').innerHTML = 'Available soon...'
   window.setTimeout(function() {
-    document.getElementById('video').innerHTML = '<i class="fa fa-play" id="disappear"></i> Watch now'
+    document.getElementById('video').innerHTML = '<i "fa fa-play" id="disappear"></i> Watch now'
   }, 1800);
 });
 
@@ -74,7 +74,7 @@ function popupOpenClose(popup) {
 
   /* Add div inside popup for layout if one doesn't exist */
   if ($(".wrapper").length == 0) {
-    $(popup).wrapInner("<div class='wrapper'></div>");
+    $(popup).wrapInner("<div 'wrapper'></div>");
   }
 
   /* Open popup */
