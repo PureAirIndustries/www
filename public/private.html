@@ -1,0 +1,268 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://simeydotme.github.io/jQuery-ui-Slider-Pips/dist/css/jqueryui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://simeydotme.github.io/jQuery-ui-Slider-Pips/dist/css/jquery-ui-slider-pips.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://simeydotme.github.io/jQuery-ui-Slider-Pips/dist/css/app.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+    />
+
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background: #1f1f35;
+      }
+      p,
+      li {
+        color: white;
+      }
+
+      h4 {
+        color: white;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 100;
+      }
+      .center {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        align-content: stretch;
+      }
+
+      .left {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: stretch;
+      }
+      .mrgn {
+        margin-top: 20px;
+        padding-left: 20px;
+      }
+      .par {
+        padding: 0 40px;
+        text-align: justify;
+      }
+      li {
+        padding-left: 60px;
+        text-align: justify;
+      }
+      a {
+        font-color: white;
+        color: white;
+      }
+      a:hover {
+        color: #00bfff;
+        decoration: none;
+        text-decoration: none;
+      }
+      header {
+        background-image: url(./bg-header.min.svg), none;
+      }
+
+      .logo {
+        width: 300px;
+        height: auto;
+        padding: 25px 0 0 25px;
+      }
+      .brt {
+        margin-left: 45px;
+      }
+
+      .t {
+        padding-right: 12px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header></header>
+    <img class="logo" src="./pureairindustries_logo_no_background.png" alt="" />
+    <ul class="breadcrumb brt">
+      <li class="breadcrumb-item">
+        <a href="#"><i class="fas fa-cloud"></i> </a>
+      </li>
+
+      <li class="breadcrumb-item"><a href="#">PureAirIndustries</a></li>
+      <li class="breadcrumb-item"><a href="#">HR</a></li>
+      <li class="breadcrumb-item"><a href="#">Employability</a></li>
+      <li class="breadcrumb-item"><a href="#">Houcem</a></li>
+    </ul>
+    <div class="container">
+      <main>
+        <div class="columns">
+          <div class="column col-12" style="height: 40px"></div>
+
+          <div class="column col-12">
+            <h1 id="amount" style="text-align: center; color: white;"></h1>
+            <div id="flat-slider"></div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-4 center">
+            <div class="">
+              <h4>Equity</h4>
+              <div id="flat-slider-vertical-1"></div>
+            </div>
+          </div>
+          <div class="column col-4 center">
+            <div class="">
+              <h4>Salary</h4>
+              <div id="flat-slider-vertical-2"></div>
+            </div>
+          </div>
+          <div class="column col-4 center">
+            <div class="">
+              <h4>Hours</h4>
+              <div id="flat-slider-vertical-3"></div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-12  left m-2 p-2">
+            <h4 class="mrgn">How calculations are made</h4>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-1"></div>
+          <div class="column col-8 p-2 par">
+            <ul>
+              <li>
+                The max amount of equity to be given is 2.6%. This is based on a
+                salary of £15,000/yr and min. 30h/week.
+              </li>
+              <li>
+                The min amount of equity to be given is 0%. This is based on a
+                salary of £30,000/yr and a min of 40h/week of work.
+              </li>
+              <li style="margin-top: 5px">
+                For each pound .000109524 is removed from equity.
+              </li>
+              <li>
+                Equity do vest over time based on hours worked. To receive the
+                full 2,3% you need to work at least 30h/week for 4 years.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column col-12 left m-2 p-2"><h4>Notes</h4></div>
+        </div>
+        <div class="columns">
+          <div class="column col-10">
+            <p>
+              We agreed on 2,3 for £19,000. And then I froze equity withdrawl
+              again when we increased your salary to £21,000. As we get closer
+              to £30,000 this equity needs to be taken away, so if salary is
+              £21,001/yr equity will be 1.9% based on a 30 hr/week.
+            </p>
+            <p>
+              I'm flexible on working hours but can't allow less than 20h/week.
+              Salary will still be calculated based on amount of h. worked.
+            </p>
+            <p>
+              Bear in mind, the total yr salary can be revised as we get money
+              coming in without affecting equity.
+            </p>
+          </div>
+          <div class="column col-4 col-ml-auto"></div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script
+    type="text/javascript"
+    src="https://simeydotme.github.io/jQuery-ui-Slider-Pips/dist/js/jquery-plus-ui.min.js"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://simeydotme.github.io/jQuery-ui-Slider-Pips/dist/js/jquery-ui-slider-pips.js"
+  ></script>
+  <script type="text/javascript">
+    $.extend($.ui.slider.prototype.options, {
+      animate: 300
+    });
+    var equity = 23;
+    var salary = 21000;
+    var hours = 30;
+    $("#flat-slider")
+      .slider({
+        max: 50,
+        min: 0,
+        range: true,
+        values: [10, 40]
+      })
+      .slider("pips", {
+        first: "pip",
+        last: "pip"
+      });
+
+    $("#flat-slider-vertical-1").slider({
+      max: 26,
+      min: 0,
+      range: "min",
+      value: equity,
+      orientation: "vertical"
+    });
+
+    $("#flat-slider-vertical-2").slider({
+      max: 30000,
+      min: 15000,
+      range: "min",
+      value: salary,
+      orientation: "vertical"
+    });
+
+    $("#flat-slider-vertical-3").slider({
+      max: 30,
+      min: 20,
+      range: "min",
+      value: hours,
+      orientation: "vertical"
+    });
+
+    $(
+      "#flat-slider-vertical-1, #flat-slider-vertical-2, #flat-slider-vertical-3"
+    )
+      .slider("pips", {
+        first: "pip",
+        last: "pip"
+      })
+      .slider("float");
+
+    $("#amount").html(
+      "<span class='t' id='equity'>E: " +
+        equity / 10 +
+        "%" +
+        "</span>   <span class='t' id='amount'>   £: " +
+        salary +
+        "</span>   <span class='t' id='hours'>    T: " +
+        hours +
+        "hrs/week</span>"
+    );
+  </script>
+</html>
