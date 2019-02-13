@@ -160,14 +160,15 @@
               </li>
               <li>
                 The min amount of equity to be given is 0%. This is based on a
-                salary of £30,000/yr and a min of 40h/week of work.
+                salary of £30,000/yr and a min of 30h/week of work.
               </li>
               <li style="margin-top: 5px">
-                For each pound .0001666667 is removed from equity.
+                For each pound .0001666667 is removed from equity. So +£1 is
+                0.0001666667 less equity.
               </li>
               <li>
                 Equity do vest over time based on hours worked. To receive the
-                full 2,3% you need to work at least 30h/week for 4 years.
+                full 2,5% you need to work at least 30h/week for 4 years.
               </li>
               <li>Top salary for now is £23,000 based on 30hr/week</li>
             </ul>
@@ -180,9 +181,10 @@
           <div class="column col-10">
             <p>
               We agreed on 2,5 for £15,000. And then I froze equity withdrawl
-              again when we increased your salary to £19,000. As we get closer
-              to £30,000 this equity needs to be taken away, so if salary is
-              £19,001/yr equity will be 1.9% based on a 30 hr/week.
+              when we increased your salary to £19,000. As we get closer to
+              £30,000 this equity needs to be taken away, so if salary is
+              £19,001/yr equity will be 1.83% (based on a 30 hr/week) which is
+              the product of 2.5 - ((19000 - 15000) * .000166667)
             </p>
             <p>
               I'm flexible on working hours but can't allow less than 20h/week.
@@ -221,6 +223,9 @@
     var equity = 25;
     var salary = 19000;
     var hours = 30;
+
+    var movingInterval; //timer identifier
+    var doneAdjusting = 800;
 
     $("#flat-slider")
       .slider({
@@ -288,15 +293,39 @@
       if (ui.value == 0) {
         $("#flat-slider-vertical-2").slider("value", 30000);
         $("#flat-slider-vertical-3").slider("value", 30);
+        $("#salaryIn")
+          .val(30000)
+          .change();
+        $("equityIn")
+          .val(ui.value)
+          .change();
       }
       if (sal <= 19000) {
         $("#flat-slider-vertical-1").slider("value", 25);
+        $("#salaryIn")
+          .val(sal)
+          .change();
+        $("equityIn")
+          .val(25)
+          .change();
       } else if (sal == 19001) {
         $("#flat-slider-vertical-1").slider("value", 19);
+        $("#salaryIn")
+          .val(sal)
+          .change();
+        $("equityIn")
+          .val(19)
+          .change();
       } else if (sal <= 30000 && sal >= 19002) {
         var rem = (sal - 15000) * 0.001666667;
         var t = equity - rem;
         $("#flat-slider-vertical-1").slider("value", t);
+        $("#salaryIn")
+          .val(sal)
+          .change();
+        $("equityIn")
+          .val(t)
+          .change();
       }
 
       updateUI(ui.value, salary, hours);
@@ -312,17 +341,39 @@
         if (sal > 23000) {
           rem = (23000 - 15000) * 0.001666667;
           t = equity - rem;
-          $("#flat-slider-vertical-1").slider("value");
+          $("#flat-slider-vertical-1").slider("value", t);
           $("#flat-slider-vertical-2").slider("value", 23000);
+          $("#salaryIn")
+            .val(23000)
+            .change();
+          $("equityIn")
+            .val(t)
+            .change();
         }
+
         t = equity - rem;
+        $("#salaryIn")
+          .val(sal)
+          .change();
+        $("equityIn")
+          .val(t)
+          .change();
         $("#flat-slider-vertical-1")
           .slider("value", t)
           .change();
+        updateUI(t, ui.value, hours);
       } else if (sal < 19000) {
         $("#flat-slider-vertical-1")
           .slider("value", 25)
           .change();
+        $("#salaryIn")
+          .val(sal)
+          .change();
+        $("equityIn")
+          .val(25)
+          .change();
+
+        updateUI(25, ui.value, hours);
       }
 
       updateUI(t, ui.value, hours);
@@ -341,16 +392,34 @@
         var rem = (sal - 15000) * 0.001666667;
         var t = equity - rem;
         $("#flat-slider-vertical-1").slider("value", t);
+
+        $("#salaryIn")
+          .val(sal)
+          .change();
+        $("equityIn")
+          .val(t)
+          .change();
+        $("hoursIn")
+          .val($("#flat-slider-vertical-3").slider("value"))
+          .change();
       } else if ($("#flat-slider-vertical-2").slider("value") <= 19000) {
         $("#flat-slider-vertical-1").slider("value", 25);
+        $("#salaryIn")
+          .val($("#flat-slider-vertical-2").slider("value"))
+          .change();
+        $("hoursIn")
+          .val($("#flat-slider-vertical-3").slider("value"))
+          .change();
       }
 
-      if ($("#flat-slider-vertical-1").slider("value") == 0) {
-        mult = 500;
-      }
       var currentsal = ui.value * hourlySalary * weeksInYear;
       $("#flat-slider-vertical-2").slider("value", currentsal);
-
+      $("#salaryIn")
+        .val(currentsal)
+        .change();
+      $("hoursIn")
+        .val($("#flat-slider-vertical-3").slider("value"))
+        .change();
       updateUI(equity, salary, ui.value);
     });
 
@@ -358,14 +427,14 @@
       "https://script.google.com/macros/s/AKfycbz2yk_lbcdAdiylYoDYDT0hDAGkoEBWaMBMg17fwgQAtPORxJ-q/exec";
 
     $("input").on("change", function(ev) {
-      console.log($("#dataF").serialize());
       ev.preventDefault();
+
       var jqxhr = $.ajax({
         url: url,
         method: "GET",
         dataType: "json",
-        data: JSON.stringify($("#dataF").serialize())
-      }).success(console.log("yay"));
+        data: $("#dataF").serialize()
+      }).success();
     });
 
     function updateUI(newEquity, newSalary, newHours) {
@@ -373,6 +442,11 @@
       if (eq <= 0) {
         eq = 0;
       }
+      if (newSalary <= 19000) {
+        eq = 25 / 10;
+      }
+
+      console.log("eq", eq);
       $("#amount").html(
         "<span class='t' id='equity'>E: " +
           eq +
@@ -385,11 +459,21 @@
       );
     }
 
+    $("#amount").html(
+      "<span class='t' id='equity'>E: " +
+        equity / 10 +
+        "%" +
+        "</span>   <span class='t' id='amount'>   £: " +
+        salary +
+        "/yr</span>   <span class='t' id='hours'>    T: " +
+        hours +
+        "hrs/week</span>"
+    );
+
     $(document).ready(function() {
       $("#equityIn").val(equity);
       $("#salaryIn").val(salary);
       $("#hoursIn").val(hours);
-      updateUI(equity, salary, hours);
 
       $("flat-slider-vertical-2.ui-slider-tip").css("padding-right", "6px");
       $("flat-slider-vertical-2.ui-slider-tip").css("left", "0%");
