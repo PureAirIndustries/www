@@ -18,11 +18,12 @@ class Routes extends Component {
           <Route exact path='/' component={Home} />
           <Route exact path='/blog'
             component={Loader}
-          /> // redirect to blog.pureairindustries.cm
+          /> // redirect to blog.pureairindustries.com
           <Route exact path='/resources' component={Resources} />
           <Route exact path='/funding' component={Funding} />
           <Route exact path='/team' component={Team} />
           <Route exact path='/privacy' component={Privacy} />
+          <Route exact path='/proposals' component={Privacy} />
           <Route exact path='/tos' component={Terms} />
           <Route path='/ico'
             component={Loader}
@@ -39,4 +40,4 @@ class Routes extends Component {
   }
 }
 
-export default Routes
+export default Routes;

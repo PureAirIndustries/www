@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.3.4",
     "axios": "^0.18.0",
+    "babel": "^6.23.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "classnames": "^2.2.6",
@@ -15,6 +17,7 @@
     "file-loader": "^1.1.6",
     "jquery": "^3.2.1",
     "postcss-loader": "^2.0.10",
+    "prettier": "^1.16.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
@@ -22,6 +25,7 @@
     "serve": "^10.0.2",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
+    "video-react": "^0.13.3",
     "webpack": "^3.10.0"
   },
   "scripts": {
