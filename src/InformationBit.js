@@ -1,5 +1,4 @@
-import { React } from 'react';
-
+import { React } from "react";
 
 // Data objecct is an object with this structure
 // arr = [{col1: "A very fragile life"}, {col2}]
@@ -8,7 +7,7 @@ const InformationBit = (title, subtitle, numberOfColumns, dataObject) => {
   genColumns = () => {
     numberOfColumns.map(col => {
       {
-        <div class=`column-${col}`> </div>;
+        <div class={`column-${col}`}> </div>;
       }
     });
   };

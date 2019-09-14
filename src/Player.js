@@ -1,5 +1,5 @@
-import React from 'react';
-import { Player, ControlBar } from 'video-react';
+import React from "react";
+import { Player, ControlBar } from "video-react";
 
 export default class PlayerControl extends React.Component {
   constructor(props, context) {

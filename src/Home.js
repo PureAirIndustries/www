@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
-import classnames from 'classnames';
-import PlayerControl from './Player';
-import 'video-react/dist/video-react.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import classnames from "classnames";
+import PlayerControl from "./Player";
+import "video-react/dist/video-react.css";
 
 class Home extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      name: '',
-      email: '',
-      message: '',
+      name: "",
+      email: "",
+      message: "",
       sent: false
     };
   }
@@ -44,9 +44,9 @@ class Home extends Component {
     };
 
     const url =
-      'https://script.google.com/macros/s/AKfycbyvQLS-3V-ScX7fGhXQA5dhcHw7YxbSvT73AyC6Nzh9OHRxnUIH/exec';
+      "https://script.google.com/macros/s/AKfycbyvQLS-3V-ScX7fGhXQA5dhcHw7YxbSvT73AyC6Nzh9OHRxnUIH/exec";
 
-    axios.get(url, { dataType: 'json' }, JSON.stringify(data)).then(success =>
+    axios.get(url, { dataType: "json" }, JSON.stringify(data)).then(success =>
       this.setState({
         sent: true
       })
@@ -66,9 +66,9 @@ class Home extends Component {
             <li>
               <Link
                 to={{
-                  pathname: '/blog',
+                  pathname: "/blog",
                   state: {
-                    redirectPath: 'http://blog.pureairindustries.com',
+                    redirectPath: "http://blog.pureairindustries.com",
                     redirectToTitle:
                       "You are being redirected to Pure Air Industries' Blog - enjoy :)"
                   }
@@ -104,8 +104,8 @@ class Home extends Component {
               <header>
                 <h1
                   style={{
-                    fontSize: '5.5em',
-                    fontFamily: 'Montserrat, sans-serif'
+                    fontSize: "5.5em",
+                    fontFamily: "Montserrat, sans-serif"
                   }}
                 >
                   The air you breath is a lethal killer
@@ -118,7 +118,7 @@ class Home extends Component {
               <div className="col-md-12">
                 <header className="special">
                   <h2 className="special-font text-shadow">
-                    Every year 7 Million People Die Because of Air Pollution{' '}
+                    Every year 7 Million People Die Because of Air Pollution{" "}
                   </h2>
                 </header>
                 <div className="col-sm-8 col-sm-push-2">
@@ -126,16 +126,16 @@ class Home extends Component {
                     poster="https://s3.eu-west-2.amazonaws.com/pai-docs/PAI-Mat.png"
                     video="https://s3.eu-west-2.amazonaws.com/pai-docs/Pure+Air+Industries+Short.mp4"
                   />
-                </div>{' '}
+                </div>{" "}
                 <div className="col-sm-8 col-sm-push-2">
                   <img src="" />
                   <ul>
-                    <li style={{ margin: '2%' }}>
+                    <li style={{ margin: "2%" }}>
                       Air pollution is a huge problem, it's estimated to cost to
                       the world $5 trillion annually - not counting the
                       population is an ever growing number.
                     </li>
-                    <li style={{ margin: '2%' }}>
+                    <li style={{ margin: "2%" }}>
                       We are comited to make something about it. If you are too,
                       please do get in touch. If you're interested in the
                       product head to the partnerships section and you will be
@@ -159,10 +159,10 @@ class Home extends Component {
               </div>
               <div
                 className="container "
-                style={{ textAlign: 'center', color: '#333' }}
+                style={{ textAlign: "center", color: "#333" }}
               >
                 <div className="col-sm-18 col-sm-pull-8">
-                  <div className="midas-card" style={{ minWidth: '100%' }}>
+                  <div className="midas-card" style={{ minWidth: "100%" }}>
                     <p>
                       We believe everyone has the right to have pure, clean and
                       fresh air no matter where he/she decides to live.
@@ -201,7 +201,7 @@ class Home extends Component {
               <div className="flex flex-2">
                 <div
                   className="video col video-card video-shadow"
-                  style={{ background: '#fff' }}
+                  style={{ background: "#fff" }}
                 >
                   <div className="image fit img-responsive">
                     <img
@@ -223,14 +223,14 @@ class Home extends Component {
 
                 <div
                   className="video col video-card video-shadow"
-                  style={{ background: '#fff' }}
+                  style={{ background: "#fff" }}
                 >
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href="https://air-pollution-eradication.mn.co/share/UTCEzigxfkBk1mMk"
                     className="link"
-                    style={{ textDecoration: 'none' }}
+                    style={{ textDecoration: "none" }}
                   >
                     <div className="image fit">
                       <img
@@ -260,7 +260,7 @@ class Home extends Component {
                 src="img/pure-air-logo.png"
                 alt=""
                 className="img-responsive"
-                style={{ width: '60%', paddingBottom: '3%' }}
+                style={{ width: "60%", paddingBottom: "3%" }}
               />
 
               <h3>Help Us Spread The Word</h3>
@@ -346,11 +346,11 @@ class Home extends Component {
                   <p
                     className={classnames({
                       hidden: true ? !this.state.sent : false,
-                      'message-sent': true ? this.state.sent : false,
-                      'animated fadeInUp': true ? this.state.sent : false
+                      "message-sent": true ? this.state.sent : false,
+                      "animated fadeInUp": true ? this.state.sent : false
                     })}
                   >
-                    Your message wasn't sent, please send your{' '}
+                    Your message wasn't sent, please send your{" "}
                     <a href="mailto:contact@pureairindustries.com">
                       email here!
                     </a>
@@ -395,9 +395,9 @@ class Home extends Component {
                     <a
                       className="logo"
                       style={{
-                        fontWeight: '300',
-                        letterSpacing: '1px',
-                        fontSize: '17px'
+                        fontWeight: "300",
+                        letterSpacing: "1px",
+                        fontSize: "17px"
                       }}
                       href="https://s3.eu-west-2.amazonaws.com/pai-docs/%5BPure+Air+Industries%5D+-+Executive+Summary.pdf"
                     >
