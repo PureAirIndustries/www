@@ -30,7 +30,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && babel-node ./gen-sitemap.js",
+    "build": "react-scripts build",
+    "sitemap": "babel-node gen-sitemap.js",
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
     "webpack": "webpack --config webpack.config.js -p",
     "test": "react-scripts test --env=jsdom",
